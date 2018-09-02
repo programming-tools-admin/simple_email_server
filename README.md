@@ -4,10 +4,41 @@ This poject uses AWS services and creates a simple email server for anyone. The 
 
 ## Installation instructions
 
-- TODO
+Prerequsities
+- AWS CLI installed with correct credentials which has access to 
+    - S3
+    - Route 53
+    - AWS simple email service (SES)
+    - AWS simple notification service (SNS)
 
-## Requirements and 
+- run the command which will ask for the following info
+    - domain name
+    - s3 bucket name
+    - registered email addresses and forward address in a csv file
+    - (optional) notification email address
 
+- It will return the following info
+    - SMTP address with user name and password
+    - list of emails that are created 
+
+
+## Requirements and Design
+
+- Application shuold create an SES domain from input
+- Application should set the following records at Amazon Route 53
+    - MX for domain
+    - TXT for verification
+    - CNAME for DKIM
+- Application should provide SMTP settings through generation of IAM role
+- Application should store all the received emails to a private S3 bucket
+- Application should allow to set up incoming email addresses and where they should be forwarded.
+- Application should provide a set up for notifications for email receival
+- Application could provide a Web User interface to show some statistics
+    - Number of email's sent
+    - number of Bounces
+    - Number of complaints
+
+Architecure can be found [here](docs/architecture.jpg)
 
 
 
