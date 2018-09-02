@@ -1,10 +1,10 @@
 # Simple Email Server
 
-This poject uses AWS services and creates a simple email server for anyone. The code here allows you to bring up your email server on Cloud (AWS), manage email addresses and monitor the emails. All you need is AWS account and follow the instructions to get your server going.
+This project uses AWS services and creates a simple email server for anyone. The code here allows you to bring up your email server on Cloud (AWS), manage email addresses and monitor the emails. All you need is AWS account and follow the instructions to get your server going.
 
 ## Installation instructions
 
-Prerequsities
+Prerequisites
 - AWS CLI installed with correct credentials which has access to 
     - S3
     - Route 53
@@ -24,7 +24,7 @@ Prerequsities
 
 ## Requirements and Design
 
-- Application shuold create an SES domain from input
+- Application should create an SES domain from input
 - Application should set the following records at Amazon Route 53
     - MX for domain
     - TXT for verification
@@ -38,7 +38,7 @@ Prerequsities
     - number of Bounces
     - Number of complaints
 
-Architecure can be found [here](docs/architecture.jpg)
+Architecture can be found [here](docs/architecture.jpg)
 
 
 
@@ -65,4 +65,3 @@ AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
 LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
 OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 SOFTWARE.
-
