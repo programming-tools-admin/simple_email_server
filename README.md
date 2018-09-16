@@ -21,7 +21,6 @@ Prerequisites
     - SMTP address with user name and password
     - list of emails that are created 
 
-
 ## Requirements and Design
 
 - Application should create an SES domain from input
