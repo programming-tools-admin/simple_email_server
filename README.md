@@ -33,12 +33,17 @@ Prerequisites
 - Application should store all the received emails to a private S3 bucket
 - Application should allow to set up incoming email addresses and where they should be forwarded.
 - Application should provide a set up for notifications for email receival
-- Application could provide a Web User interface to show some statistics
+- Application should provide a Client Web user interface for logging into user's mail box. 
+    - This mailbox should stored in S3 and can only be accessed by the Cognito user login.
+    - Mails are rendered for readibilty
+    - Meta information should be easily accesable from web interface
+    - Attachment can be downloaded
+- Application could provide a Admin Web User interface to show some statistics for email domain
     - Number of email's sent
-    - number of Bounces
+    - Number of Bounces
     - Number of complaints
 
-Architecture can be found [here](docs/architecture.jpg)
+Architecture can be found ![here](docs/architecture.jpg)
 
 
 
